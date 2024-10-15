@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG battle form screen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button onclick="Wallpaper_turn()">Wallpaper tun</button>
+    <button onclick="SetHPbase()">HP Players</button>
+    <div class="monster">
+        <img src="./assets/action.png" onclick=""> <!--Image player -->
+        <div>
+            <h2 id="name">Name Enemy</h2> <!-- Name player center with image -->
+            </br>
+            <p>Descrição asdfasdfasdfasdfasdfasdfa asdfas asdf asdf asd fasdf asdfasdfasdf asdfasdfa</p>
+            </br>
+            <span class="HP">HP: 0000/0000</span> <!-- Heart player -->
+        </div>
+    </div>
+    <div class="players">
+        <div class="player_card">
+            <img src="./assets/action.png" onclick=""> <!--Image player -->
+            <h2 id="name_p1">Name player</h2> <!-- Name player center with image -->
+            <span class="HP" id="hp_p1" onclick="SetHP(1)">HP: 0000/0000</span> <!-- Heart player -->
+            </br>
+            <button onclick="">Attack</button>
+            </br>
+            <button id="hit_p1" onclick="">Hit Player</button>
+        </div>
+
+        <div class="player_card">
+            <img src="./assets/action.png" onclick=""> <!--Image player -->
+            <h2 id="P2_name">Name player</h2> <!-- Name player center with image -->
+            <span class="HP" id="hp_p2" onclick="SetHP(2)">HP: 0000/0000</span> <!-- Heart player -->
+            </br>
+            <button onclick="">Attack</button>
+            </br>
+            <button onclick="">Hit Player</button>
+        </div>
+
+        <div class="player_card">
+            <img src="./assets/action.png" onclick=""> <!--Image player -->
+            <h2 id="name">Name player</h2> <!-- Name player center with image -->
+            <span class="HP">HP: 0000/0000</span> <!-- Heart player -->
+            </br>
+            <button onclick="">Attack</button>
+            </br>
+            <button onclick="">Hit Player</button>
+        </div>
+
+        <div class="player_card">
+            <img src="./assets/action.png" onclick=""> <!--Image player -->
+            <h2 id="name">Name player</h2> <!-- Name player center with image -->
+            <span class="HP">HP: 0000/0000</span> <!-- Heart player -->
+            </br>
+            <button onclick="">Attack</button>
+            </br>
+            <button onclick="">Hit Player</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
