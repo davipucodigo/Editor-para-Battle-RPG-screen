@@ -110,7 +110,11 @@ function SetName (idname) {
     let nome = prompt("Nome player:");
     if (nome == null || nome == "") {
         document.getElementById(idname).innerText = "Name player";
-    }else {
+        if (idname == "enemyname") {  
+            document.getElementById(idname).innerText = "Name Enemy";
+        }
+    }
+    else {
         document.getElementById(idname).innerText = nome;
     }
 }
