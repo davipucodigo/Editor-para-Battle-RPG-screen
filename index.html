@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button onclick="Wallpaper_turn()">Wallpaper tun</button>
+    <button onclick="Wallpaper_turn()">Wallpaper turn</button>
     <button onclick="SetHPbase()">HP Players</button>
+    <button onclick="SetImagePlayer()">Image player turn</button>
     <div class="monster">
         <img src="./assets/action.png" onclick=""> <!--Image player -->
         <div>
@@ -21,7 +22,7 @@
     </div>
     <div class="players">
         <div class="player_card">
-            <img src="./assets/action.png" onclick=""> <!--Image player -->
+            <img src="./assets/action.png" id="imgp1"> <!--Image player -->
             <h2 id="name1" onclick="SetName('name1')">Name player</h2> <!-- Name player center with image -->
             <span class="HP" id="hp_p1" onclick="SetHP(1)">HP: 0000/0000</span> <!-- Heart player -->
             </br>
@@ -31,7 +32,7 @@
         </div>
 
         <div class="player_card">
-            <img src="./assets/action.png" onclick=""> <!--Image player -->
+            <img src="./assets/action.png" id="imgp2"> <!--Image player -->
             <h2 id="name2" onclick="SetName('name2')">Name player</h2> <!-- Name player center with image -->
             <span class="HP" id="hp_p2" onclick="SetHP(2)">HP: 0000/0000</span> <!-- Heart player -->
             </br>
@@ -41,7 +42,7 @@
         </div>
 
         <div class="player_card">
-            <img src="./assets/action.png" onclick=""> <!--Image player -->
+            <img src="./assets/action.png" id="imgp3"> <!--Image player -->
             <h2 id="name3" onclick="SetName('name3')">Name player</h2> <!-- Name player center with image -->
             <span class="HP" id="hp_p3" onclick="SetHP(3)">HP: 0000/0000</span> <!-- Heart player -->
             </br>
@@ -51,7 +52,7 @@
         </div>
 
         <div class="player_card">
-            <img src="./assets/action.png" onclick=""> <!--Image player -->
+            <img src="./assets/action.png" id="imgp4"> <!--Image player -->
             <h2 id="name4" onclick="SetName('name4')">Name player</h2> <!-- Name player center with image -->
             <span class="HP" id="hp_p4" onclick="SetHP(4)">HP: 0000/0000</span> <!-- Heart player -->
             </br>

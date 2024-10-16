@@ -198,3 +198,45 @@ function HitPlayer(num) {
             break;
     }
 }
+
+function SetImagePlayer() {
+    let url;
+    let num = Number(prompt("Numero player: example 1, 2, 3 ou 4"));
+    switch (num) {
+        case 1:
+            url = prompt("Coloque a URL da imagem: ");
+            document.getElementById("imgp1").src = url;
+            if (url == null || url == "") {
+            url = "./assets/action.png";
+            document.getElementById("imgp1").src = url;
+            }
+            break;
+        case 2:
+            url = prompt("Coloque a URL da imagem: ");
+            document.getElementById("imgp2").src = url;
+            if (url == null || url == "") {
+            url = "./assets/action.png";
+            document.getElementById("imgp2").src = url;
+            }
+            break;
+        case 3:
+            url = prompt("Coloque a URL da imagem: ");
+            document.getElementById("imgp3").src = url;
+            if (url == null || url == "") {
+            url = "./assets/action.png";
+            document.getElementById("imgp3").src = url;
+            }
+            break;
+        case 4:
+            url = prompt("Coloque a URL da imagem: ");
+            document.getElementById("imgp4").src = url;
+            if (url == null || url == "") {
+            url = "./assets/action.png";
+            document.getElementById("imgp4").src = url;
+            }
+            break;
+        default:
+            alert("Seleção Invalida");
+            break;
+    }
+}
