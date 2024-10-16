@@ -5,6 +5,7 @@ var valor_HP_p1 = 0;
 var valor_HP_p2 = 0;
 var valor_HP_p3 = 0;
 var valor_HP_p4 = 0;
+var valor_HP_p5 = 0;
 
 function Wallpaper_turn() {
     var wp_url;
@@ -18,6 +19,7 @@ function SetHPbase() {
     document.getElementById("hp_p2").innerHTML = "HP: "+valor_HP_p2+"/"+HP_base;
     document.getElementById("hp_p3").innerHTML = "HP: "+valor_HP_p3+"/"+HP_base;
     document.getElementById("hp_p4").innerHTML = "HP: "+valor_HP_p4+"/"+HP_base;
+    document.getElementById("hp_p5").innerHTML = "HP: "+valor_HP_p5+"/"+HP_base;
 }
 
 function SetHP(num){
@@ -100,7 +102,25 @@ function SetHP(num){
                 document.getElementById("hp_p4").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 0%, rgb(38, 38, 44) 0%)";
             }
             break;
-    
+        case 5:
+            valor_HP_p5 = prompt("HP player 5:");
+            document.getElementById("hp_p5").innerHTML = "HP: "+valor_HP_p5+"/"+HP_base;
+            if (valor_HP_p5 > 0.7*HP_base) {
+                document.getElementById("hp_p5").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 100%, rgb(38, 38, 44) 0%)";
+            }
+            if (valor_HP_p5 > 0.5*HP_base && valor_HP_p5 <= 0.7*HP_base) {
+                document.getElementById("hp_p5").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 70%, rgb(38, 38, 44) 0%)";
+            }
+            if (valor_HP_p5 > 0.2*HP_base && valor_HP_p5 <= 0.5*HP_base) {
+                document.getElementById("hp_p5").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 50%, rgb(38, 38, 44) 0%)";
+            }
+            if (valor_HP_p5 <= 0.2*HP_base) {
+                document.getElementById("hp_p5").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 20%, rgb(38, 38, 44) 0%)";
+            }
+            if (valor_HP_p5 <= 0) {
+                document.getElementById("hp_p5").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 0%, rgb(38, 38, 44) 0%)";
+            }
+            break;
         default:
             break;
     }
@@ -197,7 +217,25 @@ function HitPlayer(num) {
                 document.getElementById("hp_p4").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 0%, rgb(38, 38, 44) 0%)";
             }
             break;
-    
+            case 5:
+                valor_HP_p5 -= Number(prompt("Dano no player 5:"));
+                document.getElementById("hp_p5").innerHTML = "HP: "+valor_HP_p5+"/"+HP_base;
+                if (valor_HP_p5 > 0.7*HP_base) {
+                    document.getElementById("hp_p5").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 100%, rgb(38, 38, 44) 0%)";
+                }
+                if (valor_HP_p5 > 0.5*HP_base && valor_HP_p5 <= 0.7*HP_base) {
+                    document.getElementById("hp_p5").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 70%, rgb(38, 38, 44) 0%)";
+                }
+                if (valor_HP_p5 > 0.2*HP_base && valor_HP_p5 <= 0.5*HP_base) {
+                    document.getElementById("hp_p5").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 50%, rgb(38, 38, 44) 0%)";
+                }
+                if (valor_HP_p5 <= 0.2*HP_base) {
+                    document.getElementById("hp_p5").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 20%, rgb(38, 38, 44) 0%)";
+                }
+                if (valor_HP_p5 <= 0) {
+                    document.getElementById("hp_p5").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 0%, rgb(38, 38, 44) 0%)";
+                }
+                break;
         default:
             break;
     }
@@ -205,7 +243,7 @@ function HitPlayer(num) {
 
 function SetImagePlayer() {
     let url;
-    let num = Number(prompt("Numero player: example 1, 2, 3 ou 4"));
+    let num = Number(prompt("Numero player: example 1, 2, 3, 4 ou 5"));
     switch (num) {
         case 1:
             url = prompt("Coloque a URL da imagem: ");
@@ -239,6 +277,14 @@ function SetImagePlayer() {
             document.getElementById("imgp4").src = url;
             }
             break;
+            case 5:
+                url = prompt("Coloque a URL da imagem: ");
+                document.getElementById("imgp5").src = url;
+                if (url == null || url == "") {
+                url = "./assets/action.png";
+                document.getElementById("imgp5").src = url;
+                }
+                break;
         default:
             alert("Seleção Invalida");
             break;

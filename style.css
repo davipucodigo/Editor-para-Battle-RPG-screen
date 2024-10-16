@@ -13,7 +13,6 @@ body {
     display: flex;
     flex-direction: row-reverse;
     background-image: linear-gradient(rgba(220, 30, 30, 0.5),rgba(0, 0, 0),rgba(220, 30, 30, 0.5));
-    position: fixed;
     text-align: center;
     color: white;
     border: 5px solid white;
@@ -22,7 +21,7 @@ body {
     width: 450px;
     height: 300px;
     margin-top: 50px;
-    margin-left: 500px;
+    margin-left: 30%;
 }
 
 .monster img {
@@ -73,8 +72,8 @@ body {
     border-style: double;
     width: 250px;
     height: 300px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .player_card img {
