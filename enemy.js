@@ -1,4 +1,4 @@
-var valor_HP_enemy;
+var valor_HP_enemy = 0;
 var HP_base_enemy = 1000;
 
 function SetHPbaseEnemy() {
