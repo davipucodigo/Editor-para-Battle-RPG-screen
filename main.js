@@ -143,49 +143,141 @@ function HitPlayer(num) {
     }
 }
 
+function URL(url,idimg) {
+    url = prompt("Coloque a URL da imagem: ");
+    document.getElementById(idimg).src = url;
+    if (url == null || url == "") {
+        url = "./assets/action.png";
+        document.getElementById(idimg).src = url;
+    }
+}
+
 function SetImagePlayer() {
     let url;
-    let num = Number(prompt("Numero player: example 1, 2, 3, 4 ou 5"));
+    let num = Number(prompt("Numero player URL: example 1, 2, 3, 4 ou 5"));
     switch (num) {
         case 1:
-            url = prompt("Coloque a URL da imagem: ");
-            document.getElementById("imgp1").src = url;
-            if (url == null || url == "") {
-            url = "./assets/action.png";
-            document.getElementById("imgp1").src = url;
-            }
+            URL(url,"imgp1");
             break;
         case 2:
-            url = prompt("Coloque a URL da imagem: ");
-            document.getElementById("imgp2").src = url;
-            if (url == null || url == "") {
-            url = "./assets/action.png";
-            document.getElementById("imgp2").src = url;
-            }
+            URL(url,"imgp2");
             break;
         case 3:
-            url = prompt("Coloque a URL da imagem: ");
-            document.getElementById("imgp3").src = url;
-            if (url == null || url == "") {
-            url = "./assets/action.png";
-            document.getElementById("imgp3").src = url;
-            }
+            URL(url,"imgp3");
             break;
         case 4:
-            url = prompt("Coloque a URL da imagem: ");
-            document.getElementById("imgp4").src = url;
-            if (url == null || url == "") {
-            url = "./assets/action.png";
-            document.getElementById("imgp4").src = url;
-            }
+            URL(url,"imgp4");
             break;
-            case 5:
-                url = prompt("Coloque a URL da imagem: ");
-                document.getElementById("imgp5").src = url;
-                if (url == null || url == "") {
-                url = "./assets/action.png";
-                document.getElementById("imgp5").src = url;
-                }
+        case 5:
+            URL(url,"imgp5");
+                break;
+        default:
+            alert("Seleção Invalida");
+            break;
+    }
+}
+
+//
+
+function SetImagePlayerFILE() {
+            let num = Number(prompt("Numero player FILE: example 1, 2, 3, 4 ou 5"));
+            let fileInput;
+        switch (num) {
+            case 1:
+                fileInput = document.getElementById('inputImg1'); // Referência ao input de arquivo
+                fileInput.addEventListener('change', function(event) {
+                    const file = event.target.files[0];  // Pega o primeiro arquivo selecionado
+                    if (file) {
+                        const reader = new FileReader();  // Usa FileReader para ler o conteúdo do arquivo
+                        
+                        // Quando o FileReader terminar de ler o arquivo
+                        reader.onload = function(e) {
+                            // Atribui a URL gerada pela leitura como a fonte da imagem
+                            document.getElementById("imgp1").src = e.target.result;
+                        };
+                        
+                        // Lê o arquivo como uma URL de dados (data URL)
+                        reader.readAsDataURL(file);
+                    }
+                });
+                fileInput.click();
+
+            break;
+        case 2:
+                fileInput = document.getElementById('inputImg2'); // Referência ao input de arquivo
+                fileInput.addEventListener('change', function(event) {
+                    const file = event.target.files[0];  // Pega o primeiro arquivo selecionado
+                    if (file) {
+                        const reader = new FileReader();  // Usa FileReader para ler o conteúdo do arquivo
+                        
+                        // Quando o FileReader terminar de ler o arquivo
+                        reader.onload = function(e) {
+                            // Atribui a URL gerada pela leitura como a fonte da imagem
+                            document.getElementById("imgp2").src = e.target.result;
+                        };
+                        
+                        // Lê o arquivo como uma URL de dados (data URL)
+                        reader.readAsDataURL(file);
+                    }
+                });
+                fileInput.click();                       
+            break;
+        case 3:
+            fileInput = document.getElementById('inputImg3'); // Referência ao input de arquivo
+                fileInput.addEventListener('change', function(event) {
+                    const file = event.target.files[0];  // Pega o primeiro arquivo selecionado
+                    if (file) {
+                        const reader = new FileReader();  // Usa FileReader para ler o conteúdo do arquivo
+                        
+                        // Quando o FileReader terminar de ler o arquivo
+                        reader.onload = function(e) {
+                            // Atribui a URL gerada pela leitura como a fonte da imagem
+                            document.getElementById("imgp3").src = e.target.result;
+                        };
+                        
+                        // Lê o arquivo como uma URL de dados (data URL)
+                        reader.readAsDataURL(file);
+                    }
+                });
+                fileInput.click();   
+            break;
+        case 4:
+            fileInput = document.getElementById('inputImg4'); // Referência ao input de arquivo
+                fileInput.addEventListener('change', function(event) {
+                    const file = event.target.files[0];  // Pega o primeiro arquivo selecionado
+                    if (file) {
+                        const reader = new FileReader();  // Usa FileReader para ler o conteúdo do arquivo
+                        
+                        // Quando o FileReader terminar de ler o arquivo
+                        reader.onload = function(e) {
+                            // Atribui a URL gerada pela leitura como a fonte da imagem
+                            document.getElementById("imgp4").src = e.target.result;
+                        };
+                        
+                        // Lê o arquivo como uma URL de dados (data URL)
+                        reader.readAsDataURL(file);
+                    }
+                });
+                fileInput.click();   
+            break;
+        case 5:
+            fileInput = document.getElementById('inputImg5'); // Referência ao input de arquivo
+                fileInput.addEventListener('change', function(event) {
+                    const file = event.target.files[0];  // Pega o primeiro arquivo selecionado
+                    if (file) {
+                        const reader = new FileReader();  // Usa FileReader para ler o conteúdo do arquivo
+                        
+                        // Quando o FileReader terminar de ler o arquivo
+                        reader.onload = function(e) {
+                            // Atribui a URL gerada pela leitura como a fonte da imagem
+                            document.getElementById("imgp5").src = e.target.result;
+                        };
+                        
+                        // Lê o arquivo como uma URL de dados (data URL)
+                        reader.readAsDataURL(file);
+                    }
+                });
+                fileInput.click();   
                 break;
         default:
             alert("Seleção Invalida");

@@ -9,10 +9,6 @@ body {
     background-size: cover;
 }
 
-button {
-    padding: 3px;
-    margin-bottom: 10px;
-}
 
 .monster {
     display: flex;
@@ -25,8 +21,8 @@ button {
     line-height: 28px;
     width: 450px;
     height: 300px;
-    margin-top: 50px;
-    margin-left: 30%;
+    margin-top: 35px;
+    margin-left: 32%;
 }
 
 .monster img {
@@ -138,5 +134,26 @@ button {
     border-radius: 100px;
     margin: 10px;
     margin-top: 40px;
+}
+
+
+.btn {
+    display: block;
+    padding: 3px;
+    margin-bottom: 3px;
+    margin-right: 5px;
+    width: 130px;
+    height: 25px;
+}
+
+.BarButtonsRow {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+}
+
+.ButtonImgSpan {
+    display: flex;
+    flex-direction: column;
 }
 /* fim */

@@ -23,6 +23,26 @@ function SetImageEnemy() {
     }
 }
 
+function SetImageEnemyFILE() {
+    fileInput = document.getElementById('inputEnemy'); // Referência ao input de arquivo
+    fileInput.addEventListener('change', function(event) {
+        const file = event.target.files[0];  // Pega o primeiro arquivo selecionado
+        if (file) {
+            const reader = new FileReader();  // Usa FileReader para ler o conteúdo do arquivo
+            
+            // Quando o FileReader terminar de ler o arquivo
+            reader.onload = function(e) {
+                // Atribui a URL gerada pela leitura como a fonte da imagem
+                document.getElementById("Enemyimg").src = e.target.result;
+            };
+            
+            // Lê o arquivo como uma URL de dados (data URL)
+            reader.readAsDataURL(file);
+        }
+    });
+    fileInput.click();
+}
+
 function attackEnemy () {
     valor_HP_enemy -= Number(prompt("Player ataque no Inimigo dano:"));
     document.getElementById("hp_enemy").innerHTML = "HP: "+valor_HP_enemy+"/"+HP_base_enemy;

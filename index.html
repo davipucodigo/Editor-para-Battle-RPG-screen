@@ -7,12 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head> 
 <body>
-    <button onclick="Wallpaper_turn()">Wallpaper turn</button>
-    <button onclick="SetHPbase()">HP Players</button>
-    <button onclick="SetImagePlayer()">Image player turn</button>
-    <button onclick="SetHPbaseEnemy()">HP Enemy</button>
-    <button onclick="SetImageEnemy()">Image Enemy turn</button>
-    <button onclick="Description()">Description</button>
+    <div class="BarButtonsRow">
+        <button class="btn" onclick="Wallpaper_turn()">Wallpaper turn</button>
+        <button class="btn" onclick="SetHPbase()">HP Players</button>
+        <span class="ButtonImgSpan">
+            <button class="btn" onclick="SetImagePlayer()">URL Image player</button>
+            <input style="display: none;" type="file" id="inputImg1" accept="image/*"> 
+            <input style="display: none;" type="file" id="inputImg2" accept="image/*"> 
+            <input style="display: none;" type="file" id="inputImg3" accept="image/*"> 
+            <input style="display: none;" type="file" id="inputImg4" accept="image/*">
+            <input style="display: none;" type="file" id="inputImg5" accept="image/*"> 
+            <button class="btn" onclick="SetImagePlayerFILE()">FILE Image player</button>
+        </span>
+
+        <button class="btn" onclick="SetHPbaseEnemy()">HP Enemy</button>
+
+        <span class="ButtonImgSpan">
+            <button class="btn" onclick="SetImageEnemy()">URL Image Enemy</button>
+            <input style="display: none;" type="file" id="inputEnemy" accept="image/*"> 
+            <button class="btn" onclick="SetImageEnemyFILE()">FILE Image Enemy</button>
+        </span>
+        <button class="btn" onclick="Description()">Description</button>
+    </div>
     <div class="monster">
         <img src="./assets/action.png" id="Enemyimg"> <!--Image player -->
         <div>
