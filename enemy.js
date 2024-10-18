@@ -4,41 +4,13 @@ var HP_base_enemy = 1000;
 function SetHPbaseEnemy() {
     HP_base_enemy = prompt("Colocar HP de referência ENEMY:");
     document.getElementById("hp_enemy").innerHTML = "HP: "+valor_HP_enemy+"/"+HP_base_enemy;
-    if (valor_HP_enemy > 0.7*HP_base) {
-        document.getElementById("hp_enemy").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 100%, rgb(38, 38, 44) 0%)";
-    }
-    if (valor_HP_enemy > 0.5*HP_base_enemy && valor_HP_enemy <= 0.7*HP_base_enemy) {
-        document.getElementById("hp_enemy").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 70%, rgb(38, 38, 44) 0%)";
-    }
-    if (valor_HP_enemy > 0.2*HP_base_enemy && valor_HP_enemy <= 0.5*HP_base_enemy) {
-        document.getElementById("hp_enemy").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 50%, rgb(38, 38, 44) 0%)";
-    }
-    if (valor_HP_enemy <= 0.2*HP_base_enemy) {
-        document.getElementById("hp_enemy").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 20%, rgb(38, 38, 44) 0%)";
-    }
-    if (valor_HP_enemy <= 0) {
-        document.getElementById("hp_enemy").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 0%, rgb(38, 38, 44) 0%)";
-    }
+    HP_Visual_Effects(valor_HP_enemy,"hp_enemy",HP_base_enemy);
 }
 
 function SetHPEnemy(){
     valor_HP_enemy = prompt("HP enemy:");
     document.getElementById("hp_enemy").innerHTML = "HP: "+valor_HP_enemy+"/"+HP_base_enemy;
-    if (valor_HP_enemy > 0.7*HP_base) {
-        document.getElementById("hp_enemy").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 100%, rgb(38, 38, 44) 0%)";
-    }
-    if (valor_HP_enemy > 0.5*HP_base_enemy && valor_HP_enemy <= 0.7*HP_base_enemy) {
-        document.getElementById("hp_enemy").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 70%, rgb(38, 38, 44) 0%)";
-    }
-    if (valor_HP_enemy > 0.2*HP_base_enemy && valor_HP_enemy <= 0.5*HP_base_enemy) {
-        document.getElementById("hp_enemy").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 50%, rgb(38, 38, 44) 0%)";
-    }
-    if (valor_HP_enemy <= 0.2*HP_base_enemy) {
-        document.getElementById("hp_enemy").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 20%, rgb(38, 38, 44) 0%)";
-    }
-    if (valor_HP_enemy <= 0) {
-        document.getElementById("hp_enemy").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 0%, rgb(38, 38, 44) 0%)";
-    }
+    HP_Visual_Effects(valor_HP_enemy,"hp_enemy",HP_base_enemy);
 }
 
 function SetImageEnemy() {
@@ -54,21 +26,7 @@ function SetImageEnemy() {
 function attackEnemy () {
     valor_HP_enemy -= Number(prompt("Player ataque no Inimigo dano:"));
     document.getElementById("hp_enemy").innerHTML = "HP: "+valor_HP_enemy+"/"+HP_base_enemy;
-    if (valor_HP_enemy > 0.7*HP_base) {
-        document.getElementById("hp_enemy").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 100%, rgb(38, 38, 44) 0%)";
-    }
-    if (valor_HP_enemy > 0.5*HP_base_enemy && valor_HP_enemy <= 0.7*HP_base_enemy) {
-        document.getElementById("hp_enemy").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 70%, rgb(38, 38, 44) 0%)";
-    }
-    if (valor_HP_enemy > 0.2*HP_base_enemy && valor_HP_enemy <= 0.5*HP_base_enemy) {
-        document.getElementById("hp_enemy").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 50%, rgb(38, 38, 44) 0%)";
-    }
-    if (valor_HP_enemy <= 0.2*HP_base_enemy) {
-        document.getElementById("hp_enemy").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 20%, rgb(38, 38, 44) 0%)";
-    }
-    if (valor_HP_enemy <= 0) {
-        document.getElementById("hp_enemy").style.backgroundImage = "linear-gradient(to right, rgb(201, 30, 30) 0%, rgb(38, 38, 44) 0%)";
-    }
+    HP_Visual_Effects(valor_HP_enemy,"hp_enemy",HP_base_enemy);
 }
 
 function Description () {
