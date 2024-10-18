@@ -9,6 +9,11 @@ body {
     background-size: cover;
 }
 
+button {
+    padding: 3px;
+    margin-bottom: 10px;
+}
+
 .monster {
     display: flex;
     flex-direction: row-reverse;
@@ -53,7 +58,7 @@ body {
     display: flex;
     flex-direction: row;
     position: absolute;
-    top: 63%;
+    top: 62%;
     color: white;
     line-height: 28px;
 }
@@ -94,3 +99,44 @@ body {
     border-radius: 100px;
     margin: 10px;
 }
+
+/* Dead */
+.player_card_dead {
+    display: flexbox;
+    text-align: center;
+    background-image: linear-gradient(rgba(220, 30, 30, 0.5),rgb(255, 105, 105),rgba(220, 30, 30, 0.5));
+    opacity: 35%;
+    border-radius: 10px;
+    border: 5px solid white;
+    border-style: double;
+    width: 250px;
+    height: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.player_card_dead img {
+    display: inline-block;
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    margin: auto 0;
+    margin-bottom: -20px;
+    transform: translateY(-40px);
+}
+
+.player_card_dead button {
+    opacity: 0%;
+    position: fixed;
+}
+
+.player_card_dead .HP {
+    display: inline-block;
+    background-image: linear-gradient(to right, rgb(201, 30, 30) 0%, rgb(38, 38, 44) 0%);
+    width: 200px;
+    height: 24px;
+    border-radius: 100px;
+    margin: 10px;
+    margin-top: 40px;
+}
+/* fim */

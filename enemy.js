@@ -4,13 +4,13 @@ var HP_base_enemy = 1000;
 function SetHPbaseEnemy() {
     HP_base_enemy = prompt("Colocar HP de referência ENEMY:");
     document.getElementById("hp_enemy").innerHTML = "HP: "+valor_HP_enemy+"/"+HP_base_enemy;
-    HP_Visual_Effects(valor_HP_enemy,"hp_enemy",HP_base_enemy);
+    HP_Visual_Effects(valor_HP_enemy,"hp_enemy",HP_base_enemy,"none");
 }
 
 function SetHPEnemy(){
     valor_HP_enemy = prompt("HP enemy:");
     document.getElementById("hp_enemy").innerHTML = "HP: "+valor_HP_enemy+"/"+HP_base_enemy;
-    HP_Visual_Effects(valor_HP_enemy,"hp_enemy",HP_base_enemy);
+    HP_Visual_Effects(valor_HP_enemy,"hp_enemy",HP_base_enemy,"none");
 }
 
 function SetImageEnemy() {
@@ -26,7 +26,7 @@ function SetImageEnemy() {
 function attackEnemy () {
     valor_HP_enemy -= Number(prompt("Player ataque no Inimigo dano:"));
     document.getElementById("hp_enemy").innerHTML = "HP: "+valor_HP_enemy+"/"+HP_base_enemy;
-    HP_Visual_Effects(valor_HP_enemy,"hp_enemy",HP_base_enemy);
+    HP_Visual_Effects(valor_HP_enemy,"hp_enemy",HP_base_enemy,"none");
 }
 
 function Description () {
