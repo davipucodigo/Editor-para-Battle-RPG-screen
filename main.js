@@ -114,46 +114,51 @@ function SetName (idname) {
 function HitPlayer(num) {
     switch (num) {
         case 1:
-            document.getElementById("play1").classList.remove("HIT_player");
             valor_HP_p1 -= Number(prompt("Dano no player 1:"));
             document.getElementById("hp_p1").innerHTML = "HP: "+valor_HP_p1+"/"+HP_base;
-            
             document.getElementById("play1").classList.add("HIT_player");
             HP_Visual_Effects(valor_HP_p1,"hp_p1",HP_base,"play1");
+            setTimeout(() => {  
+                document.getElementById("play1").classList.remove("HIT_player");
+            }, 1000);
             break;
         case 2:
-            document.getElementById("play2").classList.remove("HIT_player");
             valor_HP_p2 -= Number(prompt("Dano no player 2:"));
             document.getElementById("hp_p2").innerHTML = "HP: "+valor_HP_p2+"/"+HP_base;
-
             document.getElementById("play2").classList.add("HIT_player");
             HP_Visual_Effects(valor_HP_p2,"hp_p2",HP_base,"play2");
+            setTimeout(() => {  
+                document.getElementById("play2").classList.remove("HIT_player");
+            }, 1000);
             break;
         case 3:
-            
-            document.getElementById("play3").classList.remove("HIT_player");
             valor_HP_p3 -= Number(prompt("Dano no player 3:"));
             document.getElementById("hp_p3").innerHTML = "HP: "+valor_HP_p3+"/"+HP_base;
-
             document.getElementById("play3").classList.add("HIT_player");
             HP_Visual_Effects(valor_HP_p3,"hp_p3",HP_base,"play3");
+            setTimeout(() => {  
+                document.getElementById("play3").classList.remove("HIT_player");
+            }, 1000);
             break;
         case 4:
-                document.getElementById("play4").classList.remove("HIT_player");
                 valor_HP_p4 -= Number(prompt("Dano no player 4:"));
                 document.getElementById("hp_p4").innerHTML = "HP: "+valor_HP_p4+"/"+HP_base;
             
                 document.getElementById("play4").classList.add("HIT_player");
                 HP_Visual_Effects(valor_HP_p4,"hp_p4",HP_base,"play4");
+                setTimeout(() => {  
+                    document.getElementById("play4").classList.remove("HIT_player");
+                }, 1000);
             break;
             case 5:
-                
-                document.getElementById("play5").classList.remove("HIT_player");
                 valor_HP_p5 -= Number(prompt("Dano no player 5:"));
                 document.getElementById("hp_p5").innerHTML = "HP: "+valor_HP_p5+"/"+HP_base;
                 
                 document.getElementById("play5").classList.add("HIT_player");
                 HP_Visual_Effects(valor_HP_p5,"hp_p5",HP_base,"play5");
+                setTimeout(() => {  
+                    document.getElementById("play5").classList.remove("HIT_player");
+                }, 1000);
                 break;
         default:
             break;

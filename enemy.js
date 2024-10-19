@@ -44,8 +44,6 @@ function SetImageEnemyFILE() {
 }
 
 function attackEnemy (i) {
-    document.getElementById(i).classList.remove("attack");
-    document.getElementsByClassName("monster")[0].classList.remove("HIT_player");
     valor_HP_enemy -= Number(prompt("Player ataque no Inimigo dano:"));
 
     document.getElementById("hp_enemy").innerHTML = "HP: "+valor_HP_enemy+"/"+HP_base_enemy;
@@ -53,6 +51,10 @@ function attackEnemy (i) {
     document.getElementById(i).classList.add("attack");
     document.getElementsByClassName("monster")[0].classList.add("HIT_player");
     HP_Visual_Effects(valor_HP_enemy,"hp_enemy",HP_base_enemy,"none");
+    setTimeout( () => {  
+    document.getElementById(i).classList.remove("attack");
+    document.getElementsByClassName("monster")[0].classList.remove("HIT_player");
+    }, 1000);
 }
 
 function Description () {
