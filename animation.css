@@ -1,0 +1,48 @@
+@keyframes hit_effect {
+    0% {
+    }
+    10% {
+        background-image: linear-gradient(rgba(251, 11, 11, 0.8),rgba(0, 0, 0),rgba(251, 11, 11, 0.8));
+    }
+    15% {
+        background-image: linear-gradient(rgba(251, 11, 11, 0.8),rgba(0, 0, 0),rgba(251, 11, 11, 0.8));
+        transform: rotate(-5deg);
+    }
+    25% {
+        background-image: linear-gradient(rgba(251, 11, 11, 0.8),rgba(0, 0, 0),rgba(251, 11, 11, 0.8));
+        transform: rotate(5deg);
+    }
+    20% {
+        background-image: linear-gradient(rgba(251, 11, 11, 0.8),rgba(0, 0, 0),rgba(251, 11, 11, 0.8));
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes attack_effect {
+    0% {
+    }
+    10% {
+        transform: translateY(-300px);
+    }
+    15% {
+        transform: translateY(-300px) rotate(-5deg);
+    }
+    25% {
+        transform: translateY(-400px) rotate(5deg);
+    }
+    50% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+.HIT_player {
+    animation-name: hit_effect;
+    animation-duration: 0.5s;
+    animation-direction: initial; 
+}
+
+.attack {
+    animation-name: attack_effect;
+    animation-duration: 2s;
+    animation-direction: initial; 
+}
