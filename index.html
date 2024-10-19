@@ -6,9 +6,15 @@
     <title>RPG battle form screen</title>
     <link rel="stylesheet" href="style.css">
 </head> 
-<body>
+<body> 
     <div class="BarButtonsRow">
-        <button class="btn" onclick="Wallpaper_turn()">Wallpaper turn</button>
+        
+        <span class="ButtonImgSpan">
+            <button class="btn" onclick="Wallpaper_turn()">Wallpaper URL</button>
+            
+            <input style="display: none;" type="file" id="inputWall" accept="image/*"> 
+            <button class="btn" onclick="Wallpaper_turnFILE()">Wallpaper FILE</button>
+        </span>
         <button class="btn" onclick="SetHPbase()">HP Players</button>
         <span class="ButtonImgSpan">
             <button class="btn" onclick="SetImagePlayer()">URL Image player</button>

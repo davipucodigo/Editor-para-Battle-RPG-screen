@@ -284,3 +284,21 @@ function SetImagePlayerFILE() {
             break;
     }
 }
+
+function Wallpaper_turnFILE() {
+    const fileInput = document.getElementById('inputWall');
+
+    fileInput.addEventListener('change', function() {
+        const file = fileInput.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                document.body.style.backgroundImage = `url(${event.target.result})`;
+                document.body.style.backgroundSize = 'cover'; // Para cobrir todo o fundo
+                document.body.style.backgroundPosition = 'center'; // Centralizar a imagem
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+    fileInput.click();
+}
